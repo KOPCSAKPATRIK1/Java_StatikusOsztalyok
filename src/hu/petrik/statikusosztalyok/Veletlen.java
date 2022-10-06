@@ -15,6 +15,8 @@ public final class Veletlen {
     private static final List<String> vezNevek = feltolt("files/veznev.txt");
     private static final List<String> ferfiKerNevek = feltolt("files/ferfikernev.txt");
     private static final List<String> noiKerNevek = feltolt("files/noikernev.txt");
+    private static  final List<String> sportagak = feltolt("files/sportag.txt");
+    private static  final List<String> sportEgyesuletek = feltolt("files/egyesulet.txt");
 
     private static List<String> feltolt(String fajlnev) {
         List<String> lista = new ArrayList<>();
@@ -90,6 +92,8 @@ public final class Veletlen {
     }
     public  static String  velEmail(String nev)
     {
+        int szam = velEgesz(1,99);
+
         return null;
     }
 
@@ -104,11 +108,11 @@ public final class Veletlen {
 
     public static  String velSportag()
     {
-        return  null;
+        return sportagak.get(rnd.nextInt(sportagak.size()));
     }
 
     public static String velSportegyesulet()
     {
-        return  null;
+        return sportEgyesuletek.get(rnd.nextInt(sportEgyesuletek.size()));
     }
 }
