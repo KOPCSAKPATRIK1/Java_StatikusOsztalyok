@@ -74,4 +74,41 @@ public final class Veletlen {
     public static String velTeljesNev(boolean nem) {
         return velVezetekNev() + " " + velKeresztNev(nem);
     }
+    public static String velDatum (int ev1, int ev2)
+    {
+        int nap = velEgesz(1,28);
+        int honap = velEgesz(1,12);
+        int ev = 0;
+        if (ev1 > ev2)
+        {
+            ev = velEgesz(ev2,ev1);
+        }
+        ev = velEgesz(ev2, ev1);
+
+        return String.format("%d : %d : %d",ev, honap, nap);
+
+    }
+    public  static String  velEmail(String nev)
+    {
+        return null;
+    }
+
+    public static String velMobil()
+    {
+        int szam = velEgesz(100,99);
+        int szam2 = velEgesz(10,99);
+        int szam3= velEgesz(10, 99);
+
+        return String.format("+36 (30) %d-%d-%d", szam, szam2, szam3);
+    }
+
+    public static  String velSportag()
+    {
+        return  null;
+    }
+
+    public static String velSportegyesulet()
+    {
+        return  null;
+    }
 }
